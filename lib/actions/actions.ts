@@ -8,19 +8,19 @@ export const getCollectionDetails = async (collectionId: string) => {
   return await collection.json()
 }
 
-export const getProducts = async () => {
-  const products = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products`)
-  return await products.json()
+export const getBlogs = async () => {
+  const blogs = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/blogs`)
+  return await blogs.json()
 }
 
-export const getProductDetails = async (productId: string) => {
-  const product = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products/${productId}`)
-  return await product.json()
+export const getBlogDetails = async (blogId: string) => {
+  const blog = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/blogs/${blogId}`)
+  return await blog.json()
 }
 
-export const getSearchedProducts = async (query: string) => {
-  const searchedProducts = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/search/${query}`)
-  return await searchedProducts.json()
+export const getSearchedBlogs = async (query: string) => {
+  const searchedBlogs = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/search/${query}`)
+  return await searchedBlogs.json()
 }
 
 export const getOrders = async (customerId: string) => {
@@ -28,7 +28,7 @@ export const getOrders = async (customerId: string) => {
   return await orders.json()
 }
 
-export const getRelatedProducts = async (productId: string) => {
-  const relatedProducts = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products/${productId}/related`)
-  return await relatedProducts.json()
+export const getRelatedBlogs = async (blogId: string) => {
+  const relatedBlogs = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/blogs/${blogId}/related`)
+  return await relatedBlogs.json()
 }

@@ -1,5 +1,5 @@
 import Footer from "@/components/Footer";
-import ProductCard from "@/components/ProductCard";
+import BlogCard from "@/components/BlogCard";
 import { getCollectionDetails } from "@/lib/actions/actions";
 import Image from "next/image";
 import React from "react";
@@ -24,8 +24,8 @@ const CollectionDetails = async ({
       <p className="text-heading3-bold text-grey-2">{collectionDetails.title}</p>
       <p className="text-body-normal text-grey-2 text-center max-w-[900px]">{collectionDetails.description}</p>
       <div className="flex flex-wrap gap-16 justify-center">
-        {collectionDetails.products.map((product: ProductType) => (
-          <ProductCard key={product._id} product={product} />
+        {collectionDetails.blogs.map((blog: BlogType) => (
+          <BlogCard key={blog._id} blog={blog} />
         ))}
       </div>
     </div>

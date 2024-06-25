@@ -1,7 +1,5 @@
 "use client";
 
-import useCart from "@/lib/hooks/useCart";
-
 import { UserButton, useUser } from "@clerk/nextjs";
 import { CircleUserRound, Menu, Search, ShoppingCart, Heart, Notebook } from "lucide-react";
 import Image from "next/image";
@@ -10,10 +8,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 
 const Navbar = () => {
-  const pathname = usePathname();
   const router = useRouter();
-  const { user } = useUser();
-  const cart = useCart();
 
   const [dropdownMenu, setDropdownMenu] = useState(false);
   const [query, setQuery] = useState("");
@@ -41,34 +36,6 @@ const Navbar = () => {
 
       <div className="relative flex gap-3 items-center">
 
-        <div className="max-lg:hidden relative flex gap-3 items-center">
-        <Link
-          href={user ? "/wishlist" : "/sign-in"}
-          className={`hover:text-red-1 flex justify-center items-center gap-2 ${
-            pathname === "/wishlist" && "text-red-1"
-          }`}
-        >
-          <Heart />
-          Wishlist
-        </Link>
-        <Link
-          href={user ? "/orders" : "/sign-in"}
-          className={`hover:text-red-1 flex justify-center items-center gap-2 ${
-            pathname === "/orders" && "text-red-1"
-          }`}
-        >
-          <Notebook />
-          Orders
-        </Link>
-        </div>
-        <Link
-          href="/cart"
-          className="flex items-center gap-3 border rounded-lg px-2 py-1 hover:bg-black hover:text-white max-md:hidden"
-        >
-          <ShoppingCart />
-          <p className="text-base-bold">Cart ({cart.cartItems.length})</p>
-        </Link>
-
         <Menu
           className="cursor-pointer lg:hidden"
           onClick={() => setDropdownMenu(!dropdownMenu)}
@@ -79,34 +46,7 @@ const Navbar = () => {
             <Link href="/" className="hover:text-red-1">
               Home
             </Link>
-            <Link
-              href={user ? "/wishlist" : "/sign-in"}
-              className="hover:text-red-1"
-            >
-              Wishlist
-            </Link>
-            <Link
-              href={user ? "/orders" : "/sign-in"}
-              className="hover:text-red-1"
-            >
-              Orders
-            </Link>
-            <Link
-              href="/cart"
-              className="flex items-center gap-3 border rounded-lg px-2 py-1 hover:bg-black hover:text-white"
-            >
-              <ShoppingCart />
-              <p className="text-base-bold">Cart ({cart.cartItems.length})</p>
-            </Link>
           </div>
-        )}
-
-        {user ? (
-          <UserButton afterSignOutUrl="/sign-in" />
-        ) : (
-          <Link href="/sign-in">
-            <CircleUserRound />
-          </Link>
         )}
       </div>
     </div>

@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 interface HeartFavoriteProps {
-  product: ProductType;
+  product: BlogType;
   updateSignedInUser?: (updatedUser: UserType) => void;
 }
 

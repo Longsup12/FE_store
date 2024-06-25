@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { ClerkProvider } from "@clerk/nextjs";
 
 import "../globals.css";
 import Navbar from "@/components/Navbar";
@@ -9,8 +8,8 @@ import ToasterProvider from "@/lib/providers/ToasterProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Borcelle Store",
-  description: "Borcelle Ecommerce Store",
+  title: "Huyen Blog",
+  description: "Huyenne Blog",
 };
 
 export default function RootLayout({
@@ -21,11 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ClerkProvider>
           <ToasterProvider />
           <Navbar />
           {children}
-        </ClerkProvider>
       </body>
     </html>
   );
