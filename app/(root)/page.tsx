@@ -5,15 +5,20 @@ import BlogList from "@/components/BlogList";
 import Slider from "@/components/Slider";
 
 import Image from "next/image";
+import Headbanner from "@/public/pink-sky-background-with-crescent-moon.jpg"
 
 export default function Home() {
   return (
     <>
-      <Slider />
-      <Collections />
-      <Hero/>
+      <div className="">
+        <Image src={Headbanner} alt="banner" className='w-full max-h-[25vw] object-cover object-top'/>
+      </div>
+      {/* <Slider /> */}
+      
+      {/* <Hero/> */}
       <BlogList />
-      <Footer/>
+      <Collections />
+      {/* <Footer/> */}
     </>
   );
 }

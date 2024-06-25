@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logoImg from '../public/logo.png'
+// import logoImg from '../public/logo.png'
 
 const Footer = () => {
     return ( 
@@ -8,7 +8,7 @@ const Footer = () => {
                 <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
                     <div>
                         <div className="text-teal-600">
-                            <Image src={logoImg} alt="logo" width={120} height={120} />
+                            {/* <Image src={logoImg} alt="logo" width={120} height={120} /> */}
                         </div>
 
                         <p className="mt-4 max-w-xs ">
