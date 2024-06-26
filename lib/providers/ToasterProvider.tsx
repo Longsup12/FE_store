@@ -4,4 +4,4 @@ const ToasterProvider = () => {
   return <Toaster />;
 }
 
-export default ToasterProvider;
+export default ToasterProvider; 
