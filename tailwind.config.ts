@@ -91,6 +91,8 @@ const config: Config = {
         "brown-1": "#44322f",
         "grey-1": "#F7F7F7",
         "grey-2": "#8A8A8A",
+        "grey-3": "#958d8b",
+        "main-violet": "#f4eded"
       },
     },
   },

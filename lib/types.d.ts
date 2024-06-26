@@ -16,3 +16,15 @@ type BlogType = {
   createdAt: string;
   updatedAt: string;
 };
+
+type BannerType = {
+  _id: string;
+  title: string; 
+  headBanner: string;
+  diaryTittle: string;
+  diaryBanner: [string];
+  diaryDescription: string;
+  midBanner: string;
+  avatar: string;
+  isActive: boolean;
+}

@@ -23,12 +23,17 @@ export const getSearchedBlogs = async (query: string) => {
   return await searchedBlogs.json()
 }
 
-export const getOrders = async (customerId: string) => {
-  const orders = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/orders/customers/${customerId}`)
-  return await orders.json()
-}
-
 export const getRelatedBlogs = async (blogId: string) => {
   const relatedBlogs = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/blogs/${blogId}/related`)
   return await relatedBlogs.json()
+}
+
+export const getBanner = async () => {
+  const blogs = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/banners`)
+  return await blogs.json()
+}
+
+export const getBannerDetails = async (bannerId: string) => {
+  const blog = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/banners/${bannerId}`)
+  return await blog.json()
 }

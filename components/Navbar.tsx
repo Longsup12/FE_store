@@ -14,14 +14,14 @@ const Navbar = () => {
   const [query, setQuery] = useState("");
 
   return (
-    <div className="sticky top-0 z-10 py-2 px-10 flex gap-2 justify-between items-center max-sm:px-2 bg-[#f4eded]">
+    <div className="sticky top-0 z-10 py-2 px-10 flex gap-2 justify-between items-center max-sm:px-2 bg-main-violet">
       <Link href="/">
         {/* <Image src="/logo.png" alt="logo" width={130} height={100} /> */}
       </Link>
 
       <div className="flex gap-3 border border-[#958d8b] px-3 py-1 items-center rounded-lg basis-1/3 justify-between">
         <input
-          className="outline-none max-sm:max-w-[120px] bg-[#f4eded]"
+          className="outline-none max-sm:max-w-[120px] bg-main-violet"
           placeholder="Search..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
@@ -39,20 +39,20 @@ const Navbar = () => {
           href="/"
           className="flex items-center gap-3 rounded-lg px-2 py-1 max-md:hidden"
         >
-          <p className="text-[#958d8b] uppercase text-small-medium hover:text-brown-1">Home</p>
+          <p className="text-grey-3 uppercase text-small-medium hover:text-brown-1">Home</p>
         </Link>
         <Link
           href="/about"
           className="flex items-center gap-3 rounded-lg px-2 py-1 max-md:hidden"
         >
-          <p className="text-[#958d8b] uppercase text-small-medium hover:text-brown-1">About</p>
+          <p className="text-grey-3 uppercase text-small-medium hover:text-brown-1">About</p>
         </Link>
 
         <Link
           href="/contact"
           className="flex items-center gap-3 rounded-lg px-2 py-1 max-md:hidden"
         >
-          <p className="text-[#958d8b] uppercase text-small-medium hover:text-brown-1">Contact</p>
+          <p className="text-grey-3 uppercase text-small-medium hover:text-brown-1">Contact</p>
         </Link>
       </div>
 

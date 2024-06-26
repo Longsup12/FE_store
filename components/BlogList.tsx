@@ -3,16 +3,17 @@ import BlogCard from "./BlogCard";
 
 const BlogList = async () => {
   const blogs = await getBlogs();
+  const latestBlogs = blogs && blogs.length > 0 ? blogs.slice(0, 3) : [];
 
   return (
-    <div className="flex flex-col items-center gap-10 py-10 px-5">
-      <p className="text-heading1-bold">Blogs</p>
-      {!blogs || blogs.length === 0 ? (
+    <div className="flex flex-row items-center gap-10 py-10 px-10 ">
+      <p className=" uppercase text-grey-3 -rotate-90">Latest Blog</p>
+      {latestBlogs.length === 0? (
         <p className="text-body-bold">No blogs found</p>
       ) : (
         <div className="flex flex-wrap justify-center gap-16">
-          {blogs.map((blog: BlogType) => (
-            <BlogCard key={blog._id} blog={blog}/>
+          {latestBlogs.map((blog: BlogType) => (
+            <BlogCard key={blog._id} blog={blog} />
           ))}
         </div>
       )}
