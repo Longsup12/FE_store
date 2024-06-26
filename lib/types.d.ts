@@ -22,7 +22,7 @@ type BannerType = {
   title: string; 
   headBanner: string;
   diaryTittle: string;
-  diaryBanner: [string];
+  diaryBanner: string;
   diaryDescription: string;
   midBanner: string;
   avatar: string;
