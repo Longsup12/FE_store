@@ -1,8 +1,8 @@
-import Footer from "@/components/Footer"
 import Gallery from "@/components/Gallery"
 import BlogCard from "@/components/BlogCard"
 import BlogInfo from "@/components/BlogInfo"
 import { getBlogDetails, getRelatedBlogs } from "@/lib/actions/actions"
+import Copyright from "@/components/Copyright"
 
 const BlogDetails = async ({ params }: { params: { blogId: string }}) => {
   const blogDetails = await getBlogDetails(params.blogId)
@@ -24,7 +24,7 @@ const BlogDetails = async ({ params }: { params: { blogId: string }}) => {
       </div>
     </div>
 
-    <Footer/>
+    <Copyright/>
     </>
   )
 }

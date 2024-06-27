@@ -16,7 +16,7 @@ const Collections = async () => {
       {!collections || collections.length === 0 ? (
         <p className="text-body-bold">No collections found</p>
       ) : (
-        <div className="flex flex-wrap items-center justify-center gap-8">
+        <div className="flex flex-wrap md:flex-nowrap items-center justify-center gap-8">
           {lastestCollection.map((collection: CollectionType) => (
             <Link href={`/collections/${collection._id}`} key={collection._id} className="flex flex-col justify-center gap-2 hover:bg-[#f3eded] hover:rounded-md p-2.5 border-transparent border-2 transition-all">
               <Image
@@ -25,7 +25,7 @@ const Collections = async () => {
                 alt={collection.title}
                 width={350}
                 height={200}
-                className="rounded-lg cursor-pointer h-[200px] object-contain"
+                className="rounded-lg cursor-pointer h-[100px] lg:h-[200px] object-contain"
               />
               <p className="text-center text-[#958d8b] uppercase">{collection.title}</p>
             </Link>
