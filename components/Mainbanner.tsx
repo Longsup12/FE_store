@@ -16,13 +16,13 @@ const Mainbanner = async () => {
       {activeBanners.map((banner: BannerType) => (
         <div className="">
           <HeadBanner banner={banner} />
-          <div className="flex flex-row">
-            <div className="basis-2/3 flex flex-col p-5 border-r-2">
+          <div className="flex flex-col md:flex-row">
+            <div className="basis-2/3 flex flex-col p-5 border-r-2 order-2 md:order-1">
               <MonthDiary banner={banner} />
               <BlogList />
               <MidBanner banner={banner}/>
             </div>
-            <div className="basis-1/3 flex flex-col p-5">
+            <div className="basis-1/3 flex flex-col p-5 order-1 md:order-2">
               <Profie banner={banner} />
             </div>
           </div>
