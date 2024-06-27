@@ -21,7 +21,7 @@ const Navbar = () => {
     <div className={customFont.className}>
       <div className="sticky top-0 z-10 py-2 px-10 flex gap-2 justify-between items-center max-sm:px-2 bg-main-violet">
         <Link href="/">
-          {/* <Image src="/logo.png" alt="logo" width={130} height={100} /> */}
+          <Image src="/logo.png" alt="logo" width={130} height={100} />
         </Link>
 
         <div className="flex gap-3 border border-[#c5bbce] px-3 py-1 items-center rounded-lg basis-1/3 justify-between">
