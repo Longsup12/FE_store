@@ -94,6 +94,11 @@ const config: Config = {
         "grey-3": "#958d8b",
         "main-violet": "#f4eded"
       },
+      backgroundColor: {
+        "brown-1": "#44322f",
+        "grey-3": "#958d8b",
+        "main-violet": "#f4eded"
+      },
     },
   },
   plugins: [require("tailwind-scrollbar-hide")],
