@@ -10,14 +10,14 @@ const BlogDetails = async ({ params }: { params: { blogId: string }}) => {
 
   return (
     <>
+    <Gallery blogMedia={blogDetails.media} />
     <div className="flex justify-center items-start gap-16 py-10 px-5 max-md:flex-col max-md:items-center">
-      <Gallery blogMedia={blogDetails.media} />
       <BlogInfo blogInfo={blogDetails} />
     </div>
 
-    <div className="flex flex-col items-center px-10 py-10 max-md:px-3">
+    <div className="flex flex-col items-center px-10 py-10 max-md:px-3 border-t-2">
       <p className="text-heading3-bold">Related Blogs</p>
-      <div className="flex flex-wrap gap-16 mx-auto mt-8">
+      <div className="flex flex-wrap gap-16 mx-auto mt-8 justify-center">
         {relatedBlogs?.map((blog: BlogType) => (
           <BlogCard key={blog._id} blog={blog} />
         ))}
