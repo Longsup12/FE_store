@@ -15,7 +15,7 @@ const BlogInfo = ({ blogInfo }: { blogInfo: BlogType }) => {
 
       <div className="flex flex-col gap-2">
         <p className="text-base-medium text-grey-2">Description:</p>
-        <p className="text-small-medium">{blogInfo.description}</p>
+        <div dangerouslySetInnerHTML={{ __html: blogInfo.description }} />
       </div>
     </div>
   );
