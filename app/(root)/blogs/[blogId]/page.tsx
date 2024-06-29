@@ -11,7 +11,7 @@ const BlogDetails = async ({ params }: { params: { blogId: string }}) => {
   return (
     <>
     <Gallery blogMedia={blogDetails.media} />
-    <div className="flex justify-center items-start gap-16 py-10 px-5 max-md:flex-col max-md:items-center">
+    <div className="flex justify-center items-start gap-16 py-10 px-5 max-md:flex-col max-md:items-center md:max-w-[70vw] md:mx-auto">
       <BlogInfo blogInfo={blogDetails} />
     </div>
 
